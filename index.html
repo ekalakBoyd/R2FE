@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day7-JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main"></div>
+    <button onclick="changeColor()">Change Color</button>
+    <p id="demo">THIS CHANGE COLOR!!</p>
+    <br />
+    <form onsubmit="return validateForm()">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validateForm() {
+        let email = document.getElementById("email").value;
+        if (email === "") {
+          alert("Email field cannot be empty");
+          return false;
+        } else if (!email.includes("@")) {
+          alert("Invalid email format");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
